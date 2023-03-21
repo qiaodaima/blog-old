@@ -1,0 +1,160 @@
+.giftMessage {
+    position: absolute;
+    left: .2rem;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    transition: all .2s;
+    transform: translate3d(-110%, 0, 0);
+    perspective: 1000;
+
+    &.message1 {
+        bottom: 4.4rem;
+    }
+    &.message2 {
+        bottom: 3.3rem;
+    }
+    &.enter {
+        animation: giftMessageEnter 0.25s ease 0s 1 normal forwards;
+    }
+    &.leave {
+        animation: giftMessageLeave 0.3s ease 0s 1 normal forwards;
+    }
+    &.giftNumberTips {
+        .numberWrap {
+            animation: giftNumberTips 0.15s linear 0s 1 normal forwards;
+        }
+    }
+    .user {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.08rem;
+        padding-right: .9rem;
+        border-radius: 0.4rem;
+        background: rgba(0, 0, 0, 0.3);
+
+        .userImage {
+            width: 0.64rem;
+            height: 0.64rem;
+            border-radius: 50%;
+            background: #eee no-repeat center / cover;
+        }
+        .textWrap {
+            margin-left: 0.08rem;
+        }
+        .userName {
+            max-width: 5em;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 0.26rem;
+            color: #fff;
+        }
+        .tips {
+            opacity: 0.6;
+            font-size: 0.22rem;
+            color: #fff;
+        }
+    }
+    .giftItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -0.84rem;
+
+        .gift {
+            width: 1.12rem;
+            height: 1.12rem;
+            background: no-repeat center / 100% 100%;
+        }
+        .numberWrap {
+            display: flex;
+            align-items: center;
+
+            &:before {
+                content: '';
+                width: 0.44rem;
+                height: 0.58rem;
+                background: url('../../images/number/x.png') no-repeat center / 100% 100%;
+            }
+            .numberItem {
+                height: 0.58rem;
+                background: no-repeat center / 100% 100%;
+
+                &.n0 {
+                    width: 0.48rem;
+                    background-image: url('../../images/number/0.png');
+                }
+                &.n1 {
+                    width: 0.46rem;
+                    background-image: url('../../images/number/1.png');
+                }
+                &.n2 {
+                    width: 0.54rem;
+                    background-image: url('../../images/number/2.png');
+                }
+                &.n3 {
+                    width: 0.51rem;
+                    background-image: url('../../images/number/3.png');
+                }
+                &.n4 {
+                    width: 0.53rem;
+                    background-image: url('../../images/number/4.png');
+                }
+                &.n5 {
+                    width: 0.55rem;
+                    background-image: url('../../images/number/5.png');
+                }
+                &.n6 {
+                    width: 0.49rem;
+                    background-image: url('../../images/number/6.png');
+                }
+                &.n7 {
+                    width: 0.51rem;
+                    background-image: url('../../images/number/7.png');
+                }
+                &.n8 {
+                    width: 0.52rem;
+                    background-image: url('../../images/number/8.png');
+                }
+                &.n9 {
+                    width: 0.5rem;
+                    background-image: url('../../images/number/9.png');
+                }
+            }
+        }
+    }
+}
+
+@keyframes giftMessageEnter {
+    0% {
+        transform: translate3d(-110%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes giftMessageLeave {
+    0% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, -60%, 0);
+    }
+}
+@keyframes giftNumberTips {
+    0% {
+        transform: scale(.5);
+    }
+    90% {
+        transform: scale(1);
+    }
+    95% {
+        transform: scale(1.45);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

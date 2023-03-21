@@ -1,0 +1,60 @@
+.addressItem {
+    position: relative;
+    padding: 20px 15px;
+    cursor: pointer;
+    user-select: none;
+    transition: all .2s;
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: monospace;
+    }
+    &:active {
+        background: #f3f3f3;
+    }
+    .userInfo {
+        display: flex;
+        align-items: center;
+
+        .userName {
+            font-size: 14px;
+        }
+        .tel {
+            margin-left: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+    }
+    address {
+        margin-top: 5px;
+        font-style: 12px;
+        font-style: normal;
+        color: #666;
+    }
+    .btnCopy {
+        position: absolute;
+        left: 180px; top: 10px;
+        padding: 4px 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 12px;
+        color: #fff;
+        outline: none;
+        background: rgba(0, 0, 0, .6);
+        cursor: pointer;
+
+        &:after {
+            position: absolute;
+            left: 50%; bottom: 0;
+            transform: translate(-50%, 100%);
+            content: "";
+            width: 0; height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 6px solid rgba(0, 0, 0, .6);
+        }
+    }
+}
